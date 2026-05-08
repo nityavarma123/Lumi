@@ -61,11 +61,7 @@ export default function Landing() {
                     <LogoIcon />
                     <span className="font-playfair text-2xl italic text-[#EAC996] tracking-tight">lumi</span>
                 </div>
-                <div className="hidden md:flex gap-12 text-[10px] uppercase tracking-[0.25em] opacity-30">
-                    <a href="#features" className="hover:opacity-100 transition-colors">Features</a>
-                    <a href="#about" className="hover:opacity-100 transition-colors">Philosophy</a>
-                    <a href="#" className="hover:opacity-100 transition-colors">Students</a>
-                </div>
+
                 <div className="flex items-center gap-6">
                     <button onClick={toggle} className={`flex h-8 w-8 items-center justify-center rounded-lg border transition-all ${isDark ? "border-white/10 text-white/40 hover:text-white" : "border-black/10 text-black/40 hover:text-black"
                         }`}>
