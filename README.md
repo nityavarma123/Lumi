@@ -1,21 +1,83 @@
-<<<<<<< HEAD
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Lumi — Intelligent Student Wellness & Productivity Ecosystem
 
-Currently, two official plugins are available:
+Lumi is a full-stack, AI-integrated wellness companion engineered to solve the burnout cycle common in high-pressure academic environments. Built with Next.js 16, React 19, and Prisma 7, it utilizes a context-aware recommendation engine to synchronize academic performance with physiological recovery.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+> "Feel Better. Study Better. Live Better."
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+| Technology | Purpose |
+| :--- | :--- |
+| **Next.js 16 (App Router)** | High-performance React framework with integrated API routes. |
+| **React 19 + Vite** | Ultra-fast UI rendering with the latest React Compiler. |
+| **Tailwind CSS v4** | Aesthetic styling with OKLch color space for soft, professional gradients. |
+| **PostgreSQL + Prisma 7** | Relational data persistence with a type-safe ORM layer. |
+| **Google Gemini API** | Predictive AI insights and contextual wellness recommendations. |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# Lumi
-Lumi is a full-stack, AI-driven wellness ecosystem for students. Built with Next.js 16 and Prisma 7, it uses a "Gap Logic" engine to sync academic schedules with physical recovery. Features include a Wellness Index dashboard, burnout-detecting study timers, and predictive health logging to balance high performance with mental health.
->>>>>>> e3c3175891e8dac4510c29d54331b65c021b3fb0
+---
+
+## Core Features
+
+### Central Wellness Dashboard
+A unified command center calculating a real-time **Wellness Index**. It correlates cognitive load (study hours) with biological recovery (sleep/nutrition) to provide a holistic view of health.
+
+### Focus Room and Cognitive Analytics
+Subject-specific study tracking with integrated Pomodoro timers. Features **Burnout Detection** algorithms that monitor session density to suggest optimal break windows.
+
+### AI Life Organizer (Gap Logic)
+A sophisticated planner that parses academic schedules to identify "free blocks," automatically suggesting time for meals, hydration, and movement based on the user's workload.
+
+### Dreamy Sleep and Recovery
+Visualizes sleep quality and consistency using moon-inspired gradients. Provides AI-driven suggestions to optimize Circadian rhythms during high-stress exam periods.
+
+---
+
+## Project Structure
+
+```text
+Lumi/
+├── lumi-frontend/           # Vite + React (UI Layer)
+│   ├── src/components/      # Glassmorphic UI components
+│   └── src/pages/           # Dashboard, Study, Health pages
+└── lumi-backend/            # Next.js (API & AI Layer)
+    ├── prisma/              # Database schema & migrations
+    ├── src/app/api/         # CRUD & AI endpoints
+    └── src/services/        # Gemini AI & Wellness logic
+
+```
+
+## Getting Started
+
+### 1. Prerequisites
+- Node.js 18+
+- PostgreSQL (Local or Neon.tech)
+- Gemini API Key (Google AI Studio)
+
+### 2. Initial Setup
+
+```bash
+# Clone and Install Backend
+cd lumi-backend
+npm install
+npx prisma init
+
+# Clone and Install Frontend
+cd ../lumi-frontend
+npm install
+```
+
+### 3. Environment Variables (.env)
+
+```env
+DATABASE_URL="postgresql://user:pass@localhost:5432/lumi"
+GEMINI_API_KEY="your_api_key_here"
+```
+
+---
+
+
+
+
