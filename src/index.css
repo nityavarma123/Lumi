@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@200;300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-playfair: "Playfair Display", serif;
+  --font-outfit: "Outfit", sans-serif;
+
+  /* The core gold accents */
+  --color-gold: #EAC996;
+
+  /* The Deep, Warm Charcoal Base */
+  --color-bg-deep: #07060A;
+
+  /* Used for the subtle radial glow */
+  --color-gold-muted: rgba(234, 201, 150, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-bg-deep);
+  /* Sets the global tone */
+}
+
+/* Base Reveal Logic */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button & UI Details */
+.btn-gold-glow {
+  @apply bg-gold text-black transition-all duration-300 font-bold uppercase tracking-widest;
+  box-shadow: 0 0 20px rgba(234, 201, 150, 0.1);
+}
+
+.btn-gold-glow:hover {
+  @apply -translate-y-0.5;
+  box-shadow: 0 10px 30px rgba(234, 201, 150, 0.3);
+}
