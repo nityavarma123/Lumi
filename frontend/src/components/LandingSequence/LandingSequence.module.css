@@ -1,0 +1,119 @@
+.stage {
+  position: fixed; inset: 0;
+  background: var(--bg);
+  z-index: 9999; overflow: hidden;
+}
+
+/* Ambient blobs */
+.blob1, .blob2, .blob3 {
+  position: absolute; border-radius: 50%;
+  pointer-events: none; filter: blur(80px);
+}
+.blob1 { width: 500px; height: 500px; background: rgba(245,197,48,0.10); top: -120px; left: -140px; animation: bd 10s ease-in-out infinite; }
+.blob2 { width: 380px; height: 380px; background: rgba(168,152,204,0.08); bottom: -80px; right: -100px; animation: bd 12s ease-in-out infinite 4s reverse; }
+.blob3 { width: 300px; height: 300px; background: rgba(136,196,160,0.07); top: 40%; left: 30%; animation: bd 9s ease-in-out infinite 6s; }
+@keyframes bd {
+  0%,100% { transform: translate(0,0) scale(1); }
+  33%      { transform: translate(30px,-24px) scale(1.07); }
+  66%      { transform: translate(-20px,32px) scale(0.93); }
+}
+
+/* Limu anchor */
+.limuAnchor {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex; flex-direction: column; align-items: center;
+  gap: 0.5rem;
+}
+
+/* Speech bubble */
+.bubble {
+  position: absolute;
+  bottom: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--card);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.55;
+  white-space: nowrap;
+  padding: 10px 18px;
+  border-radius: 20px 20px 20px 6px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  animation: popIn 0.3s var(--ease) both;
+  z-index: 20;
+}
+
+/* When Limu is in corner - bubble opens leftward */
+.bubbleCorner {
+  right: calc(100% + 12px);
+  left: auto;
+  transform: none;
+  border-radius: 16px 16px 6px 16px;
+  white-space: pre-line;
+  animation: popInLeft 0.3s var(--ease) both;
+}
+
+@keyframes popIn {
+  from { opacity:0; transform: translateX(-50%) scale(0.84); }
+  to   { opacity:1; transform: translateX(-50%) scale(1); }
+}
+@keyframes popInLeft {
+  from { opacity:0; transform: scale(0.84); }
+  to   { opacity:1; transform: scale(1); }
+}
+
+.cursor {
+  display: inline-block; width: 2px; height: 0.85em;
+  background: var(--accent); margin-left: 2px;
+  vertical-align: middle;
+  animation: blink 0.85s step-end infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+/* Features grid */
+.featuresWrap {
+  position: absolute; left: 50%; top: 55%;
+  transform: translate(-50%, -50%);
+  width: min(560px, 88vw);
+  z-index: 5;
+}
+.featureGrid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.featureCard {
+  display: flex; align-items: center; gap: 11px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--r-lg); padding: 0.85rem 1rem;
+  box-shadow: var(--shadow);
+  opacity: 0; transform: translateY(14px) scale(0.97);
+  transition: opacity 0.35s var(--ease-out), transform 0.35s var(--ease-out);
+  position: relative; overflow: hidden;
+}
+.featureIn { opacity: 1; transform: translateY(0) scale(1); }
+.featureIcon { font-size: 1.6rem; flex-shrink: 0; line-height: 1; }
+.featureName {
+  font-family: var(--font-body); font-size: 0.82rem;
+  font-weight: 800; color: var(--text); letter-spacing: 0.01em;
+}
+.featureSub { font-size: 0.72rem; color: var(--text-2); margin-top: 2px; line-height: 1.3; }
+.featureDot {
+  width: 6px; height: 6px; border-radius: 50%;
+  position: absolute; top: 10px; right: 12px;
+}
+
+/* Skip button */
+.skipBtn {
+  position: absolute; bottom: 1.6rem; right: 1.8rem;
+  background: none; border: 1px solid var(--border-em);
+  color: var(--text-3); font-family: var(--font-body);
+  font-size: 0.78rem; font-weight: 700;
+  padding: 0.38rem 1rem; border-radius: 50px; cursor: pointer;
+  letter-spacing: 0.04em; transition: all 0.2s;
+}
+.skipBtn:hover { color: var(--text-2); border-color: var(--accent); }

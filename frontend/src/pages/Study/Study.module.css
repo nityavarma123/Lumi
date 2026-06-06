@@ -1,0 +1,38 @@
+.page{padding:2.8rem 3rem;max-width:720px;animation:fu .35s var(--ease-out) both}
+@keyframes fu{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.header{display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem}
+.title{font-family:var(--font-display);font-size:1.8rem;font-weight:800;color:var(--text)}
+.sub{font-size:.8rem;color:var(--text-2);margin-top:2px}
+.divider{height:1px;background:var(--divider);margin:1.6rem 0}
+.timerSection{display:flex;flex-direction:column;align-items:center;gap:1rem;padding:.5rem 0}
+.modeTabs{display:flex;gap:.5rem}
+.modeTab{background:none;border:1.5px solid var(--border);border-radius:50px;padding:.38rem 1.1rem;font-family:var(--font-body);font-size:.8rem;font-weight:700;color:var(--text-2);cursor:pointer;transition:all .2s}
+.modeActive{background:var(--accent-bg)!important;border-color:var(--accent)!important;color:var(--accent)!important}
+.timerDisplay{font-family:var(--font-display);font-size:5.5rem;font-weight:800;color:var(--text);letter-spacing:-4px;line-height:1}
+.timerSub{font-size:.75rem;color:var(--text-3)}
+.timerControls{display:flex;gap:.7rem;align-items:center}
+.playBtn{display:flex;align-items:center;gap:.5rem;background:var(--accent);color:#FFF8E8;border:none;border-radius:50px;padding:.7rem 2rem;font-family:var(--font-body);font-size:.92rem;font-weight:800;cursor:pointer;transition:all .22s var(--ease);box-shadow:0 4px 16px rgba(196,137,46,.28)}
+.playBtn:hover{transform:scale(1.04)}
+.ghostBtn{width:40px;height:40px;border-radius:50%;background:var(--bg-3);border:1.5px solid var(--border);color:var(--text-2);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s}
+.ghostBtn:hover{border-color:var(--border-em)}
+.subjectRow{display:flex;gap:.5rem;width:100%;max-width:420px}
+.subjectInput{flex:1;background:var(--bg-2);border:1.5px solid var(--border);border-radius:var(--r-md);padding:.65rem 1rem;font-family:var(--font-body);font-size:.88rem;color:var(--text);outline:none;transition:border-color .2s}
+.subjectInput:focus{border-color:var(--accent)}
+.subjectInput::placeholder{color:var(--text-3)}
+.logBtn{width:38px;height:38px;border-radius:var(--r-md);background:var(--accent);border:none;color:#FFF8E8;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;flex-shrink:0}
+.logBtn:disabled{opacity:.4;cursor:not-allowed}
+.section{display:flex;flex-direction:column;gap:.9rem}
+.sectionLabel{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--text-3)}
+.empty{font-size:.86rem;color:var(--text-3);padding:.5rem 0}
+.subjectRow2{display:flex;flex-direction:column;gap:.3rem}
+.subjectName{font-size:.9rem;font-weight:700;color:var(--text)}
+.subjectMeta{font-size:.72rem;color:var(--text-3)}
+.barTrack{height:3px;background:var(--divider);border-radius:4px;overflow:hidden}
+.barTrack div{height:100%;border-radius:4px;opacity:.85}
+.logItem{display:flex;align-items:center;justify-content:space-between;padding:.65rem 0;border-bottom:1px solid var(--divider)}
+.logItem:last-child{border-bottom:none}
+.logName{font-size:.88rem;font-weight:700;color:var(--text)}
+.logMeta{font-size:.72rem;color:var(--text-3);margin-top:2px}
+.delBtn{background:none;border:none;color:var(--text-3);cursor:pointer;padding:.3rem;border-radius:6px;transition:color .2s;display:flex}
+.delBtn:hover{color:var(--rose)}
+@media(max-width:768px){.page{padding:2rem 1.8rem}.timerDisplay{font-size:4rem}}

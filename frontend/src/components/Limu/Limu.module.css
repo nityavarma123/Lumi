@@ -1,0 +1,54 @@
+/* ============================================================
+   Limu Ghost Animations
+   ============================================================ */
+.wrapper {
+  position: relative;
+  display: inline-block;
+  animation: limuFloat 3.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Gentle idle float */
+@keyframes limuFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-9px); }
+}
+
+/* Shadow pulses with float */
+.shadow { animation: shadowPulse 3.5s ease-in-out infinite; }
+@keyframes shadowPulse {
+  0%, 100% { transform: scaleX(1); opacity: 0.55; }
+  50%       { transform: scaleX(0.78); opacity: 0.30; }
+}
+
+/* ── Movement: lean in direction of travel ──────────────────
+   The scallop bottom appears to "flail" behind due to rotation.
+   ──────────────────────────────────────────────────────────── */
+.dir_right {
+  animation: limuFloat 3.5s ease-in-out infinite, leanRight 0.45s var(--ease) both !important;
+}
+.dir_left {
+  animation: limuFloat 3.5s ease-in-out infinite, leanLeft 0.45s var(--ease) both !important;
+}
+@keyframes leanRight {
+  0%   { transform: rotate(0deg); }
+  40%  { transform: rotate(10deg) translateX(4px); }
+  100% { transform: rotate(7deg) translateX(2px); }
+}
+@keyframes leanLeft {
+  0%   { transform: rotate(0deg); }
+  40%  { transform: rotate(-10deg) translateX(-4px); }
+  100% { transform: rotate(-7deg) translateX(-2px); }
+}
+
+/* Bounce — excited greeting */
+.dir_bounce {
+  animation: limuBounce 0.7s cubic-bezier(0.36,0.07,0.19,0.97) both !important;
+}
+@keyframes limuBounce {
+  0%   { transform: translateY(0) scale(1, 1); }
+  25%  { transform: translateY(-18px) scale(0.92, 1.08); }
+  55%  { transform: translateY(-30px) scale(0.9, 1.1); }
+  75%  { transform: translateY(-12px) scale(1.04, 0.96); }
+  100% { transform: translateY(0) scale(1, 1); }
+}
