@@ -1,4 +1,4 @@
-# Limu
+# Lumi
 
 > A full-stack AI wellness companion for college students — tracking sleep, study, nutrition, activity and schedule, with a personalised AI chat powered by OpenAI.
 
