@@ -6,7 +6,7 @@ import {
   Sun, LogOut, Flame,
 } from 'lucide-react';
 import { useApp }  from '../../context/AppContext';
-import Limu        from '../Limu/Limu';
+import Lumi        from '../Lumi/Lumi';
 import styles      from './Sidebar.module.css';
 
 const NAV_ITEMS = [
@@ -32,8 +32,8 @@ export default function Sidebar() {
 
         {/* Logo */}
         <button className={styles.logo} onClick={() => navigate('/dashboard')} aria-label="Go to dashboard">
-          <Limu size={34} direction="idle" expression="happy" />
-          <span className={styles.logoText}>limu</span>
+          <Lumi size={34} direction="idle" expression="happy" />
+          <span className={styles.logoText}>lumi</span>
         </button>
 
         {/* Nav */}

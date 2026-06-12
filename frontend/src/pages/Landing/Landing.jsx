@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useApp } from '../../context/AppContext';
 import LandingSequence from '../../components/LandingSequence/LandingSequence';
-import Limu from '../../components/Limu/Limu';
+import Lumi from '../../components/Lumi/Lumi';
 import styles from './Landing.module.css';
 
 export default function Landing() {
@@ -38,8 +38,8 @@ export default function Landing() {
 
       {!mode ? (
         <div className={styles.hero}>
-          <Limu size={108} direction="idle" expression="excited" />
-          <h1 className={styles.name}>limu</h1>
+          <Lumi size={108} direction="idle" expression="excited" />
+          <h1 className={styles.name}>lumi</h1>
           <p className={styles.tag}>feel better. study better. live better.</p>
           <p className={styles.desc}>your cozy AI companion for college life — tracking sleep, study, nutrition and wellness in one warm space.</p>
           <div className={styles.btns}>
@@ -54,8 +54,8 @@ export default function Landing() {
       ) : (
         <div className={styles.authWrap}>
           <div className={styles.card}>
-            <Limu size={50} direction="idle" expression="happy" />
-            <h2 className={styles.cardTitle}>{mode === 'signup' ? "join limu 🌿" : "welcome back ✨"}</h2>
+            <Lumi size={50} direction="idle" expression="happy" />
+            <h2 className={styles.cardTitle}>{mode === 'signup' ? "join lumi 🌿" : "welcome back ✨"}</h2>
             <p className={styles.cardSub}>{mode === 'signup' ? "let's set up your space" : "good to see you"}</p>
             {error && <div className={styles.err}>{error}</div>}
             <form onSubmit={submit} className={styles.form} noValidate>

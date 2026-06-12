@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, Send } from 'lucide-react';
-import Limu from '../Limu/Limu';
+import Lumi from '../Lumi/Lumi';
 import { sendMessage } from '../../api/chat';
 import { useApp } from '../../context/AppContext';
 import styles from './ChatWidget.module.css';
@@ -40,7 +40,7 @@ export default function ChatWidget() {
         <div className={styles.panel}>
           <div className={styles.header}>
             <div className={styles.headerLeft}>
-              <Limu size={36} direction="idle" expression="happy" />
+              <Lumi size={36} direction="idle" expression="happy" />
               <div>
                 <div className={styles.headerName}>lumi</div>
                 <div className={styles.headerSub}>your wellness companion</div>

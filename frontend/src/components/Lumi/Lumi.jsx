@@ -1,15 +1,15 @@
 import React from 'react';
-import styles from './Limu.module.css';
+import styles from './Lumi.module.css';
 
 /**
- * Limu ghost mascot — inspired by classic cute ghost shape
+ * Lumi ghost mascot — inspired by classic cute ghost shape
  * Props:
  *   size       — pixel width
  *   direction  — 'idle' | 'left' | 'right' | 'bounce'
  *   expression — 'happy' | 'excited' | 'sleepy' | 'thinking'
  *   className
  */
-export default function Limu({ size = 80, direction = 'idle', expression = 'happy', className = '' }) {
+export default function Lumi({ size = 80, direction = 'idle', expression = 'happy', className = '' }) {
   const isMoving = direction !== 'idle';
   const dirClass = isMoving ? styles[`dir_${direction}`] : '';
 

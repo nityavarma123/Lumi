@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Plus } from 'lucide-react';
 import { useApi, useMutation } from '../../hooks/useApi';
 import * as activityApi from '../../api/activity';
-import Limu from '../../components/Limu/Limu';
+import Lumi from '../../components/Lumi/Lumi';
 import styles from './Activity.module.css';
 
 const TYPES = ['walking','running','gym','cycling','yoga','stretching','swimming','other'];
@@ -37,7 +37,7 @@ export default function Activity() {
   return (
     <div className={styles.page}>
       <div className={styles.header}>
-        <Limu size={44} direction="idle" expression="excited" />
+        <Lumi size={44} direction="idle" expression="excited" />
         <div>
           <h1 className={styles.title}>activity</h1>
           <p className={styles.sub}>every move counts — even the small ones</p>

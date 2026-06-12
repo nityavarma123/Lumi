@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Play, Pause, RotateCcw, Plus, Trash2 } from 'lucide-react';
 import { useApi, useMutation } from '../../hooks/useApi';
 import * as studyApi from '../../api/study';
-import Limu from '../../components/Limu/Limu';
+import Lumi from '../../components/Lumi/Lumi';
 import styles from './Study.module.css';
 
 export default function Study() {
@@ -54,7 +54,7 @@ export default function Study() {
   return (
     <div className={styles.page}>
       <div className={styles.header}>
-        <Limu size={44} direction="idle" expression={running ? 'excited' : 'happy'} />
+        <Lumi size={44} direction="idle" expression={running ? 'excited' : 'happy'} />
         <div>
           <h1 className={styles.title}>study</h1>
           <p className={styles.sub}>stay focused, take real breaks</p>
@@ -100,7 +100,7 @@ export default function Study() {
             <div key={t._id} className={styles.subjectRow2}>
               <div className={styles.subjectName}>{t._id}</div>
               <div className={styles.subjectMeta}>{Math.floor(t.totalMins/60)}h {t.totalMins%60}m · {t.count} session{t.count!==1?'s':''}</div>
-              <div className={styles.barTrack}><div style={{width:`${pct}%`,background:'var(--limu-y)'}}/></div>
+              <div className={styles.barTrack}><div style={{width:`${pct}%`,background:'var(--lumi-y)'}}/></div>
             </div>
           );
         })}

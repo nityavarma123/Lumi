@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Plus, Trash2, Moon, Clock } from 'lucide-react';
 import { useApi, useMutation } from '../../hooks/useApi';
 import * as sleepApi from '../../api/sleep';
-import Limu from '../../components/Limu/Limu';
+import Lumi from '../../components/Lumi/Lumi';
 import styles from './Sleep.module.css';
 
 /* ── helpers ── */
@@ -181,7 +181,7 @@ export default function Sleep() {
     <div className={styles.page}>
 
       <div className={styles.header}>
-        <Limu size={44} direction="idle" expression="sleepy" />
+        <Lumi size={44} direction="idle" expression="sleepy" />
         <div>
           <h1 className={styles.title}>sleep</h1>
           <p className={styles.sub}>rest is not a reward — it's a requirement</p>

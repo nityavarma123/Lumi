@@ -3,7 +3,7 @@ import { Plus, Trash2, Search, X, Loader } from 'lucide-react';
 import { useApi, useMutation }  from '../../hooks/useApi';
 import * as nutritionApi        from '../../api/nutrition';
 import { useApp }               from '../../context/AppContext';
-import Limu                     from '../../components/Limu/Limu';
+import Lumi                     from '../../components/Lumi/Lumi';
 import styles                   from './Nutrition.module.css';
 
 const MEAL_TYPES = ['breakfast', 'lunch', 'dinner', 'snack'];
@@ -100,7 +100,7 @@ export default function Nutrition() {
 
       {/* ── Header ── */}
       <div className={styles.header}>
-        <Limu size={44} direction="idle" expression="happy" />
+        <Lumi size={44} direction="idle" expression="happy" />
         <div>
           <h1 className={styles.title}>nutrition</h1>
           <p className={styles.sub}>fuel your brain, feed your goals</p>

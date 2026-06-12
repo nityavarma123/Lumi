@@ -10,7 +10,7 @@
   --accent:#C4892E; --accent-bg:rgba(196,137,46,0.10); --accent-txt:#A0681E;
   --text:#2C1E10; --text-2:#7A5A3C; --text-3:#B09070;
   --mint:#5DAA86; --lav:#8878B0; --peach:#C07848; --sky:#5888A4; --rose:#A86868;
-  --limu-y:#F5C530;
+  --lumi-y:#F5C530;
   --font-body:'Nunito',system-ui,sans-serif;
   --font-display:'Sora',system-ui,sans-serif;
   --r-sm:8px; --r-md:12px; --r-lg:18px; --r-xl:24px;
@@ -26,7 +26,7 @@
   --accent:#E8C547; --accent-bg:rgba(232,197,71,0.10); --accent-txt:#E8C547;
   --text:#F0E8D5; --text-2:#C0A880; --text-3:#8A7258;
   --mint:#6AAA88; --lav:#8878B0; --peach:#C08858; --sky:#6888A4; --rose:#A86868;
-  --limu-y:#FFE45A;
+  --lumi-y:#FFE45A;
 }
 html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 body{font-family:var(--font-body);background:var(--bg);color:var(--text);min-height:100vh;transition:background .3s,color .3s}

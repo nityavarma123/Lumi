@@ -4,7 +4,7 @@ import { useApi }                from '../../hooks/useApi';
 import { getDashboard }          from '../../api/dashboard';
 import { sendContextualMessage } from '../../api/chat';
 import { useApp }                from '../../context/AppContext';
-import Limu                      from '../../components/Limu/Limu';
+import Lumi                      from '../../components/Lumi/Lumi';
 import styles                    from './Chat.module.css';
 
 // ─── Suggested prompts ───────────────────────────────────────────────────────
@@ -87,7 +87,7 @@ export default function Chat() {
           label: 'study',
           value: `${Math.floor(stats.study.mins / 60)}h ${stats.study.mins % 60}m`,
           pct: Math.min(Math.round((stats.study.mins / ((goals.studyHours ?? 4) * 60)) * 100), 100),
-          color: 'var(--limu-y)',
+          color: 'var(--lumi-y)',
         },
         {
           Icon: Apple,
@@ -113,7 +113,7 @@ export default function Chat() {
       {/* ── Header ── */}
       <div className={styles.header}>
         <div className={styles.headerInfo}>
-          <Limu size={48} direction="idle" expression="happy" />
+          <Lumi size={48} direction="idle" expression="happy" />
           <div>
             <h1 className={styles.title}>chat with lumi</h1>
             <p className={styles.subtitle}>your personal wellness AI — asks me anything about your day</p>
@@ -140,7 +140,7 @@ export default function Chat() {
               >
                 {m.role === 'assistant' && (
                   <div className={styles.botAvatar} aria-hidden="true">
-                    <Limu size={26} direction="idle" expression="happy" />
+                    <Lumi size={26} direction="idle" expression="happy" />
                   </div>
                 )}
                 <div className={`${styles.bubble} ${m.role === 'user' ? styles.bubbleUser : styles.bubbleBot}`}>
@@ -152,7 +152,7 @@ export default function Chat() {
             {sending && (
               <div className={`${styles.row} ${styles.rowBot}`}>
                 <div className={styles.botAvatar} aria-hidden="true">
-                  <Limu size={26} direction="idle" expression="thinking" />
+                  <Lumi size={26} direction="idle" expression="thinking" />
                 </div>
                 <div className={`${styles.bubble} ${styles.bubbleBot}`}>
                   <span className={styles.typing} aria-label="Lumi is typing">

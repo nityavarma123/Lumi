@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useApp } from '../../context/AppContext';
 import { useApi } from '../../hooks/useApi';
 import { getDashboard } from '../../api/dashboard';
-import Limu from '../../components/Limu/Limu';
+import Lumi from '../../components/Lumi/Lumi';
 import styles from './Dashboard.module.css';
 
 const MOODS = ['😊','😌','😤','😴','😰'];
@@ -26,7 +26,7 @@ export default function Dashboard() {
 
   const STAT_ITEMS = stats ? [
     { label:'sleep',     value:`${stats.sleep.hours}h`,     sub:`/ ${goals.sleepHours ?? 8}h goal`,    pct: pct(stats.sleep.hours, goals.sleepHours ?? 8),    color:'var(--sky)',  to:'/sleep'     },
-    { label:'study',     value:`${Math.floor(stats.study.mins/60)}h ${stats.study.mins%60}m`, sub:`/ ${goals.studyHours ?? 4}h goal`, pct: pct(stats.study.mins, (goals.studyHours ?? 4)*60), color:'var(--limu-y)', to:'/study' },
+    { label:'study',     value:`${Math.floor(stats.study.mins/60)}h ${stats.study.mins%60}m`, sub:`/ ${goals.studyHours ?? 4}h goal`, pct: pct(stats.study.mins, (goals.studyHours ?? 4)*60), color:'var(--lumi-y)', to:'/study' },
     { label:'nutrition', value:`${stats.nutrition.calories} cal`, sub:`/ ${goals.calories ?? 2000} goal`, pct: pct(stats.nutrition.calories, goals.calories ?? 2000), color:'var(--mint)', to:'/nutrition'},
     { label:'activity',  value:`${stats.activity.mins} min`, sub:`/ ${goals.activityMins ?? 60}m goal`, pct: pct(stats.activity.mins, goals.activityMins ?? 60),  color:'var(--peach)', to:'/activity' },
   ] : [];
@@ -39,8 +39,8 @@ export default function Dashboard() {
           <p className={styles.greetSub}>{greet} · {today}</p>
           <h1 className={styles.greetName}>hey, {user?.name?.toLowerCase() ?? 'you'}</h1>
         </div>
-        <div className={styles.limuWrap}>
-          <Limu size={52} direction="idle" expression="happy" />
+        <div className={styles.lumiWrap}>
+          <Lumi size={52} direction="idle" expression="happy" />
           {(user?.streak ?? 0) > 0 && <span className={styles.streak}>🔥 {user.streak}</span>}
         </div>
       </div>

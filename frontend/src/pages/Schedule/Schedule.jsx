@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Plus, X } from 'lucide-react';
 import { useApi, useMutation } from '../../hooks/useApi';
 import * as scheduleApi from '../../api/schedule';
-import Limu from '../../components/Limu/Limu';
+import Lumi from '../../components/Lumi/Lumi';
 import styles from './Schedule.module.css';
 
-const EC = { class:'var(--sky)', study:'var(--limu-y)', gym:'var(--peach)', meal:'var(--mint)', sleep:'var(--lav)', other:'var(--text-3)' };
+const EC = { class:'var(--sky)', study:'var(--lumi-y)', gym:'var(--peach)', meal:'var(--mint)', sleep:'var(--lav)', other:'var(--text-3)' };
 
 const toLocalISOStr = (d = new Date()) => {
   const pad = n => String(n).padStart(2,'0');
@@ -45,7 +45,7 @@ export default function Schedule() {
   return (
     <div className={styles.page}>
       <div className={styles.header}>
-        <Limu size={44} direction="idle" expression="thinking" />
+        <Lumi size={44} direction="idle" expression="thinking" />
         <div>
           <h1 className={styles.title}>schedule</h1>
           <p className={styles.sub}>your life, organised</p>

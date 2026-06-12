@@ -31,4 +31,4 @@ app.get('/api/health', (_, res) => res.json({ status: 'ok', env: process.env.NOD
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5001;
-app.listen(PORT, () => console.log(`🌟 limu  →  http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`🌟 lumi  →  http://localhost:${PORT}`));

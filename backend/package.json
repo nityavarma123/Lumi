@@ -1,7 +1,7 @@
 {
-  "name": "limu-backend",
+  "name": "lumi-backend",
   "version": "1.0.0",
-  "description": "Limu wellness API — Express + MongoDB + OpenAI",
+  "description": "Lumi wellness API — Express + MongoDB + OpenAI",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

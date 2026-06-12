@@ -18,8 +18,8 @@
   66%      { transform: translate(-20px,32px) scale(0.93); }
 }
 
-/* Limu anchor */
-.limuAnchor {
+/* Lumi anchor */
+.lumiAnchor {
   position: absolute;
   transform: translate(-50%, -50%);
   z-index: 10;
@@ -48,7 +48,7 @@
   z-index: 20;
 }
 
-/* When Limu is in corner - bubble opens leftward */
+/* When Lumi is in corner - bubble opens leftward */
 .bubbleCorner {
   right: calc(100% + 12px);
   left: auto;

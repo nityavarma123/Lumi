@@ -15,7 +15,7 @@ cp .env.example .env
 
 Edit `.env`:
 ```
-MONGODB_URI=mongodb://localhost:27017/limu
+MONGODB_URI=mongodb://localhost:27017/lumi
 JWT_SECRET=<any_long_random_string>
 OPENAI_API_KEY=sk-proj-...       # optional — AI features only
 ```
@@ -37,7 +37,7 @@ Open **http://localhost:5173**
 ## Project Structure
 
 ```
-limu/
+lumi/
 ├── backend/
 │   ├── server.js                 Entry point — Express app, middleware, routes
 │   ├── config/
@@ -83,7 +83,7 @@ limu/
         ├── context/
         │   └── AppContext.jsx    Auth state, theme, user object
         ├── components/
-        │   ├── Limu/             SVG ghost mascot
+        │   ├── Lumi/             SVG ghost mascot
         │   ├── LandingSequence/  Animated intro
         │   ├── Sidebar/          Left nav (desktop) + tab bar (mobile)
         │   └── ChatWidget/       Floating AI chat bubble (all pages)

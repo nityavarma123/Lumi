@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Moon, BookOpen, Apple, Activity, CalendarDays, Droplets } from 'lucide-react';
-import Limu from '../Limu/Limu';
+import Lumi from '../Lumi/Lumi';
 import styles from './LandingSequence.module.css';
 
 const FEATURES = [
@@ -25,8 +25,8 @@ function Typewriter({ text, speed = 52 }) {
 export default function LandingSequence({ onDone }) {
   const [phase,           setPhase]          = useState(0);
   const [visibleFeatures, setVisibleFeatures] = useState([]);
-  const [limuDir,         setLimuDir]         = useState('idle');
-  const [limuPos,         setLimuPos]         = useState({ top: '44%', left: '50%' });
+  const [lumiDir,         setLumiDir]         = useState('idle');
+  const [lumiPos,         setLumiPos]         = useState({ top: '44%', left: '50%' });
   const [showBubble,      setShowBubble]      = useState(false);
   const [hideFeatures,    setHideFeatures]    = useState(false);
 
@@ -35,15 +35,15 @@ export default function LandingSequence({ onDone }) {
     const t = (ms, fn) => { const id = setTimeout(fn, ms); ts.push(id); };
 
     t(200,  () => setShowBubble(true));
-    t(3000, () => { setLimuDir('right'); setLimuPos({ top:'20%', left:'70%' }); });
-    t(3500, () => { setLimuDir('idle'); setPhase(1); });
+    t(3000, () => { setLumiDir('right'); setLumiPos({ top:'20%', left:'70%' }); });
+    t(3500, () => { setLumiDir('idle'); setPhase(1); });
     t(5200, () => {
       setPhase(2);
       FEATURES.forEach((_, i) => t(5200 + i*900, () => setVisibleFeatures(p => [...p, i])));
     });
     t(13200, () => setHideFeatures(true));
-    t(14000, () => { setLimuDir('left'); setLimuPos({ top:'44%', left:'50%' }); });
-    t(14500, () => { setLimuDir('idle'); setPhase(3); });
+    t(14000, () => { setLumiDir('left'); setLumiPos({ top:'44%', left:'50%' }); });
+    t(14500, () => { setLumiDir('idle'); setPhase(3); });
     t(19000, () => { setPhase(4); onDone?.(); });
 
     return () => ts.forEach(clearTimeout);
@@ -64,11 +64,11 @@ export default function LandingSequence({ onDone }) {
     <div className={styles.stage}>
       <div className={styles.blob1} /><div className={styles.blob2} /><div className={styles.blob3} />
 
-      <div className={styles.limuAnchor} style={{
-        top: limuPos.top, left: limuPos.left,
+      <div className={styles.lumiAnchor} style={{
+        top: lumiPos.top, left: lumiPos.left,
         transition: 'top .5s cubic-bezier(.34,1.2,.64,1), left .5s cubic-bezier(.34,1.2,.64,1)',
       }}>
-        <Limu size={phase < 1 ? 100 : 76} direction={limuDir} expression={phase === 0 ? 'excited' : 'happy'} />
+        <Lumi size={phase < 1 ? 100 : 76} direction={lumiDir} expression={phase === 0 ? 'excited' : 'happy'} />
         {showBubble && bubbleText && (
           <div className={`${styles.bubble} ${inCorner ? styles.bubbleCorner : ''}`} key={phase}>
             <Typewriter text={bubbleText} speed={phase === 3 ? 42 : 52} />
